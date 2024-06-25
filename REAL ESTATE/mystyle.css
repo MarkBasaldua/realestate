@@ -7,6 +7,8 @@
 
 body {
     font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f8f8f8;
 }
 
 a {
@@ -31,12 +33,15 @@ p {
 /* Utilities */
 .container {
     width: 80%;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .main-flex-container {
     display: flex;
-    justify-content: space-around;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
 }
 
 .btn-details {
@@ -45,55 +50,56 @@ p {
     color: white;
     padding: 10px;
     text-align: center;
-    margin: 20px 0;
-    border-radius: 5px;
+    margin: 20px;
 }
 
 /* Header */
 .site-init {
-    background-image: url('./img/header.jpg');
+    background-image: url(img/header.jpg);
     background-size: cover;
     color: white;
     text-align: center;
     height: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 .bar {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    width: 100%;
-    padding: 20px;
+    height: 80px;
 }
 
 .menu a {
     color: white;
-    margin-left: 20px;
+    margin-right: 20px;
 }
 
 /* Houses and Penthouses */
-.houses-item {
+.houses-container {
     display: flex;
-    margin: 20px 0;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.houses-item {
     background-color: #dedede;
+    width: calc(33% - 20px);
+    margin-bottom: 20px;
     border-radius: 10px;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .houses-item-img img {
-    width: 300px;
+    width: 100%;
     height: auto;
 }
 
 .houses-item-text {
     padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    flex: 1;
 }
 
 .houses-item-text p.description {
@@ -103,31 +109,32 @@ p {
 .houses-item-text p.price {
     color: green;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 16px;
+    margin: 10px 0;
 }
 
 .details-container {
-    display: flex;
     padding-left: 0;
     list-style: none;
+    display: flex;
+    gap: 10px;
     margin: 10px 0;
 }
 
 .details-container li {
     display: flex;
     align-items: center;
-    margin-right: 20px;
+    gap: 5px;
 }
 
-.details-container li img {
-    margin-right: 5px;
+@media (max-width: 768px) {
+    .houses-item {
+        width: calc(50% - 20px);
+    }
 }
 
-/* Footer */
-.footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 20px;
+@media (max-width: 480px) {
+    .houses-item {
+        width: 100%;
+    }
 }
