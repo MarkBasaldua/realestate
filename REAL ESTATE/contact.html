@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mystyle.css">
+    <title>Contact Us</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">Real Estate</h1>
+            <nav class="menu">
+                <a href="#">About</a>
+                <a href="#">Blog</a>
+                <a href="#">Contact</a>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+        <h2>Contact</h2>
+        <p>Fill out the form below</p>
+        <p>We value your feedback and inquiries. Please provide the following information so we can assist you better.</p>
+        <form class="contact-form">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your Full Name">
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your Email Address">
+                
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Your Phone Number">
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="Your Message"></textarea>
+            </fieldset>
+            <fieldset>
+                <legend>Product Information</legend>
+                <label for="type">Type:</label>
+                <select id="type" name="type">
+                    <option>--- Select Type ---</option>
+                    <option>Condominium</option>
+                    <option>Apartment</option>
+                    <option>House</option>
+                </select>
+                
+                <label for="number">Number:</label>
+                <input type="text" id="number" name="number" placeholder="Product Number">
+            </fieldset>
+            <fieldset>
+                <legend>Contact Information</legend>
+                <label>Email:
+                    <input type="radio" name="contact" value="email">
+                </label>
+                <label>Phone:
+                    <input type="radio" name="contact" value="phone">
+                </label>
+                
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date">
+                
+                <label for="hour">Hour:</label>
+                <input type="time" id="hour" name="hour">
+            </fieldset>
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+    <footer>
+        <p>Powered by Zillow</p>
+        <p>&copy; 2024 | Privacy Policy</p>
+        <div class="social-media">
+            <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+            <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+            <a href="#"><img src="youtube-icon.png" alt="YouTube"></a>
+        </div>
+    </footer>
+</body>
+</html>
